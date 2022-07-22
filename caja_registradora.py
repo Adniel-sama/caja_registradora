@@ -1,4 +1,8 @@
 import datetime
+import logging
+
+logging.basicConfig(filename='cajaRegistradora.log', encoding='utf-8', level=logging.DEBUG)
+logging.info('Este es nuestro primer log y se guardará en un archivo llamado cajaRegistradora.log')
 
 boleta = {}
 rut_cliente = input('Ingrese el rut del cliente para asocialo a sus puntos: ')
