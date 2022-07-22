@@ -21,7 +21,7 @@ while estado:
     cantidad = input(' ingrese la cantidad de productos: ')
     detalle = {
         'codigo_producto': codigo_producto,
-        'nombre_pructo': nombre_producto,
+        'nombre_producto': nombre_producto,
         'categoria': categoria,
         'precio': precio,
         'cantidad': cantidad
@@ -31,5 +31,12 @@ while estado:
     if respuesta == 'no':
         estado=False
 
-print(boleta)
+print(f'Cliente: {boleta.get("rut_cliente")}')
+print(f'Correo: {boleta.get("correo_cliente")}')
+print(f'Fecha: {boleta.get("fecha_actual")}')
+
+for producto in boleta.get('detalle'):
+    print(f'{producto["codigo_producto"]} {producto["nombre_producto"]} {producto["cantidad"]} {producto["precio"]} {int(producto["cantidad"]) * int(producto["precio"])} ')
+
+
 
